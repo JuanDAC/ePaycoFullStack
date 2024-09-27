@@ -1,0 +1,40 @@
+/* General Header Styles */
+.header {
+  background-color: #6c63ff; 
+  padding: 20px;
+  border-radius: 12px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0; 
+  font-size: 24px; 
+  font-weight: bold; 
+}
+
+.header nav {
+  display: flex; 
+  gap: 15px; 
+}
+
+.header a:first-child {
+  margin-left: 1rem;
+}
+
+.header a {
+  color: white;
+  text-decoration: none; 
+  font-size: 16px; 
+  padding: 8px 12px; 
+  background-color: #574fcf; 
+  border-radius: 8px; 
+  transition: background-color 300ms ease; 
+}
+
+.header a:hover {
+  background-color: #483ccf;
+}
