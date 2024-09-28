@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 
 const Header: React.FC = () => (
   <header className={styles.header}>
-    <h1>Virtual Wallet</h1>
+    <h1>Wallet</h1>
     <nav>
       <Link to="/">Home</Link>
       <Link to="/login">Login</Link>
