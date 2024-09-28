@@ -18,7 +18,7 @@ This repository contains the solution for the **ePayco Full Stack Developer Test
   - **Wallet Balance Inquiry**: Enables users to check their current wallet balance.
 - **Tools and Libraries**:
   - `React Router`: Used for seamless navigation between different views.
-  - `React v19`: Utilized for its advanced UI rendering capabilities.
+  - `React`: Utilized for its advanced UI rendering capabilities.
   
 - **Architecture Pattern**: **Domain-Driven Design (DDD) with Hexagonal Architecture**
   - Each domain (e.g., `Registration`, `Wallet Management`, and `Transactions`) is structured independently with a clear separation between core logic, application, and infrastructure layers.
