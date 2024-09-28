@@ -38,15 +38,20 @@
 }
 
 .login__submit {
-  background-color: #6c63ff;
   color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 12px;
   cursor: pointer;
   font-size: 16px;
+  background-color: transparent; 
+  color: white;
+  box-shadow: 0 0 5rem 0 var(--color-secondary-light) inset;
+  transition: color 130ms ease 20ms, box-shadow 150ms linear, color 160ms ease; 
 }
 
 .login__submit:hover {
-  background-color: #574fcf;
+  color: var(--color-secondary-light);
+  box-shadow: 0 0 0 1px var(--color-secondary-light) inset;
+  font-weight: bolder;
 }
