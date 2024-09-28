@@ -1,17 +1,5 @@
 
 .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal__content {
   background: #fff;
   padding: 20px;
   border-radius: 16px;
@@ -19,6 +7,34 @@
   max-width: 400px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  transform: scale(0);
+}
+
+.modal::backdrop {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal[open] {
+  filter: blur(0px) opacity(1);
+  transition: all 300ms ease;
+  transform: scale(1);
+  @starting-style {
+    filter: blur(100px) opacity(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+.modal:not([open]) {
+    transform: scale(0) translateY(800%);
+    filter: blur(200px) opacity(0.5);
+    transition: all 400ms ease, display 400ms ease allow-discrete;
+    min-height: 200px;
 }
 
 .modal__close {
@@ -26,7 +42,14 @@
   top: 10px;
   right: 20px;
   font-size: 24px;
+  padding: 1rem;
   cursor: pointer;
+  color: gray;
+  transition: color 100ms ease;
+}
+
+.modal__close:hover {
+  color: var(--color-bright-red);
 }
 
 .modal__title {
@@ -35,31 +58,4 @@
   font-weight: bold;
 }
 
-.modal__label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
 
-.modal__input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  font-size: 14px;
-}
-
-.modal__submit {
-  background-color: #6c63ff;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.modal__submit:hover {
-  background-color: #574fcf;
-}
