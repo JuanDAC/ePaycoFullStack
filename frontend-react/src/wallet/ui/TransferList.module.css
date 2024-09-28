@@ -1,0 +1,65 @@
+.transferList {
+  margin:  0;
+  overflow: hidden;
+  transition: max-height 180ms linear;
+}
+
+.transferList__title {
+  margin-bottom: 1rem;
+}
+
+.loading__bar {
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 30%, var(--color-secondary-light) 50%, transparent 65%, transparent 100%);
+    background-size: 300% 100%;
+    border-radius: 4px;
+    margin-block: 1rem;
+    animation: slide 600ms linear 300ms infinite;
+}
+
+@keyframes slide {
+  from {
+    background-position: 100% 0; 
+  }
+  to {
+    background-position: 0 0; 
+  }
+}
+
+.transferList__items {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.transferList__item {
+  min-width: 4rem;
+  text-align: center;
+  padding: 10px;
+  background-color: #eceefc;
+  border-radius: 50%;
+  font-size: 14px;
+  aspect-ratio: 1;
+  color: #333;
+  box-shadow: 0 0 0 0px var(--color-secondary-light) inset;
+  transition: all 100ms ease;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transferList__item:hover:not(.transferList__item--add) {
+  box-shadow: 0 0 0 1px var(--color-secondary-light) inset;
+}
+
+.transferList__item--add {
+  border: 1px dashed var(--color-primary-dark);
+  cursor: pointer;
+  background-color: color-mix(in srgb, var(--color-bright-blue) 20%, white);
+  font-weight: bold;
+  color: var(--color-primary-dark);
+}
